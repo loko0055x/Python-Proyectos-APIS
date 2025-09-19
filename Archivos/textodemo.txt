@@ -1,0 +1,7 @@
+1,Jennifer,Calizaya,14
+2,Arazely,Romero,12
+3,David,Sanchez,18
+4,Lucero,Zamora,18
+6,Jose,Mendoza,22
+7,Belen karla,Flores Lopez,16
+8,Jose,Rafa,5
