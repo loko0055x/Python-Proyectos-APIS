@@ -21,7 +21,8 @@ rutadalto = "D:\\MisProyectos-Programacion\\Visual-Studio-Code-Proyects\\Python-
 # Open n8n
 consolaOpen("C:\\Users\\Usuario\\n8n-project-local-SinDocker", "n8n")
 
-# Open Whisper
+# Open Whisperpython -m uvicorn whisper_api:app --host 0.0.0.0 --port 8000
+
 consolaOpen(rutadalto, commandwhisper)
 
 # Open Ngrok
