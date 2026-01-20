@@ -2,7 +2,6 @@ import base64
 from io import BytesIO
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
-import traductorFuncional as trx
 
 # Cargar BLIP
 processor = BlipProcessor.from_pretrained(
@@ -14,7 +13,7 @@ model = BlipForConditionalGeneration.from_pretrained(
 
 # /////////////////////////////////////////////////////////////
 archivo_sin_leer = open(
-    "imagen_base64.txt")
+    "Testing-EvolutionAPI\\imagen_base64.txt")
 linea = archivo_sin_leer.readline()
 archivo_sin_leer.close()
 
@@ -40,5 +39,5 @@ out = model.generate(**inputs)
 caption = processor.decode(out[0], skip_special_tokens=True)
 
 # Traducir al español
-caption = trx.traduccionSpanish(caption)
+
 print("Descripción:", caption)

@@ -6,7 +6,7 @@ url = "https://xdataperu.com/reniec-2025"
 
 # Datos a enviar en POST
 data = {
-    "dato": "949273071",  # DNI a consultar
+    "dato": "905767802",  # DNI a consultar
     "tipo_consulta": "telefono_online"
 }
 

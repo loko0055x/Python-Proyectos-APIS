@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PC Gamer walter Store | eCommerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* ========== RESETEO Y BASE ========== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* ========== NAVBAR ========== */
+      nav {
+        background-color: #1a1a1a;
+        padding: 15px 30px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #0ff;
+      }
+
+      nav .logo {
+        color: #0ff;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav .nav-links a {
+        color: #fff;
+        transition: color 0.3s;
+      }
+
+      nav .nav-links a:hover {
+        color: #0ff;
+      }
+
+      nav .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .auth-buttons button {
+        background-color: #0ff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #000;
+        transition: 0.3s;
+      }
+
+      .auth-buttons button:hover {
+        background-color: #00caca;
+      }
+
+      /* ========== CARRUSEL ========== */
+      .carousel-container {
+        margin-top: 80px;
+        width: 100%;
+        max-height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel {
+        display: flex;
+        animation: slide 20s infinite;
+      }
+
+      .carousel img {
+        width: 100vw;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-100%);
+        }
+        45% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-200%);
+        }
+        70% {
+          transform: translateX(-200%);
+        }
+        75% {
+          transform: translateX(-300%);
+        }
+        95% {
+          transform: translateX(-300%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* ========== PRODUCTOS ========== */
+      .products {
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .product {
+        background: #1c1c1c;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px #0ff5;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .product h3 {
+        color: #0ff;
+        margin: 10px 0 5px;
+      }
+
+      .product p {
+        font-size: 0.95em;
+        color: #ccc;
+      }
+
+      .price {
+        font-size: 1.2em;
+        color: #0f0;
+        margin: 10px 0;
+      }
+
+      .product button {
+        background: #0ff;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .product button:hover {
+        background: #00caca;
+      }
+
+      .payment-methods {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .payment-methods img {
+        width: 40px;
+        margin: 5px;
+        filter: drop-shadow(0 0 5px #0ff);
+      }
+
+      /* ========== FOOTER ========== */
+      footer {
+        background: #1a1a1a;
+        padding: 30px 20px;
+        text-align: center;
+        border-top: 2px solid #0ff;
+      }
+
+      footer h3 {
+        color: #0ff;
+        margin-bottom: 15px;
+      }
+
+      .contact-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .contact-icons div {
+        background: #222;
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: #0ff;
+        box-shadow: 0 0 10px #0ff5;
+      }
+
+      /* ========== RESPONSIVE AJUSTES ========== */
+      @media (max-width: 600px) {
+        nav .nav-links {
+          display: none;
+        }
+
+        .auth-buttons {
+          flex-direction: column;
+        }
+
+        .carousel img {
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav>
+      <div class="logo">🖥 PC Gamer Store walter vicente</div>
+      <div class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="auth-buttons">
+        <button>Iniciar sesión</button>
+        <button>Cerrar sesión</button>
+      </div>
+    </nav>
+
+    <!-- ========== CARRUSEL ========== -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <img
+          src="https://media.istockphoto.com/id/1464147747/es/vector/computadora-pc-para-juegos-que-brilla-en-la-oscuridad-ilustraci%C3%B3n-isom%C3%A9trica-de-la-caja.jpg?s=612x612&w=0&k=20&c=It4JfdOFqYlNumj9jGYjqiHDQlFEEBcGrzKGgNZzFmY="
+        />
+        <img
+          src="https://media.istockphoto.com/id/1392486023/es/vector/pc-de-juegos-de-computadora-en-el-escritorio-de-videojuegos-en-la-habitaci%C3%B3n-oscura-con-luz.jpg?s=612x612&w=0&k=20&c=tzCNkOYNYU9VxGgI3ZMDWCOcfEpr6heg9L1l8R_9HFA="
+        />
+        <img
+          src="https://media.istockphoto.com/id/1366607992/es/vector/accesorios-de-juego-equipo-profesional-de-juegos-y-profesionales-de-ti-gamepad-y-monitor-de.jpg?s=612x612&w=0&k=20&c=qmV0lSDB_aHh6O2YIlESntU60VsUx88RsPpZeoxVAwQ="
+        />
+        <img
+          src="https://media.istockphoto.com/id/1412892932/es/vector/computadora-para-juegos-en-el-escritorio-en-la-sala-de-videojuegos-con-luces-de-ne%C3%B3n-monitor.jpg?s=612x612&w=0&k=20&c=QqjNZdqDyQqnrnmzzf7hwx3eqRxC_uohJIHkg_QFeWw="
+        />
+      </div>
+    </div>
+
+    <!-- ========== PRODUCTOS ========== -->
+    <section class="products">
+      <div class="product">
+        <img
+          src="https://media.istockphoto.com/id/1464147747/es/vector/computadora-pc-para-juegos-que-brilla-en-la-oscuridad-ilustraci%C3%B3n-isom%C3%A9trica-de-la-caja.jpg?s=612x612&w=0&k=20&c=It4JfdOFqYlNumj9jGYjqiHDQlFEEBcGrzKGgNZzFmY="
+          alt="PC Gamer 1"
+        />
+        <h3>PC Gamer RGB</h3>
+        <p>Ryzen 5, RTX 3060, 16GB RAM, SSD 512GB</p>
+        <div class="price">$999</div>
+        <button onclick="showPayment(this)">Comprar</button>
+        <div class="payment-methods">
+          <p>Pago con:</p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Yape_logo.png"
+            alt="Yape"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Plin_logo.png"
+            alt="Plin"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+            alt="PayPal"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mercado_Pago_logo.svg"
+            alt="MercadoPago"
+          />
+        </div>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://media.istockphoto.com/id/1392486023/es/vector/pc-de-juegos-de-computadora-en-el-escritorio-de-videojuegos-en-la-habitaci%C3%B3n-oscura-con-luz.jpg?s=612x612&w=0&k=20&c=tzCNkOYNYU9VxGgI3ZMDWCOcfEpr6heg9L1l8R_9HFA="
+          alt="PC Gamer 2"
+        />
+        <h3>Gamer Pro MAX</h3>
+        <p>Intel i7, RTX 4070Ti, 32GB RAM, SSD 1TB</p>
+        <div class="price">$1,799</div>
+        <button onclick="showPayment(this)">Comprar</button>
+        <div class="payment-methods">
+          <p>Pago con:</p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Yape_logo.png"
+            alt="Yape"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Plin_logo.png"
+            alt="Plin"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+            alt="PayPal"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mercado_Pago_logo.svg"
+            alt="MercadoPago"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+      <!-- chat n8n -->
+
+      <h3>Contacto y Redes</h3>
+      <div class="contact-icons">
+        <div>📧 Facebook: test@gmail.com</div>
+        <div>📱 WhatsApp: +51 999 999 999</div>
+        <div>📷 Instagram: @pcgamer_store</div>
+      </div>
+    </footer>
+
+    <!-- ========== JS ========== -->
+    <script>
+      function showPayment(button) {
+        const paymentDiv = button.nextElementSibling;
+        paymentDiv.style.display =
+          paymentDiv.style.display === "block" ? "none" : "block";
+      }
+    </script>
+    <div
+      id="n8n-chat"
+      style="z-index: 9999; position: fixed; bottom: 20px; right: 20px"
+    ></div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://protrusible-miki-hooly.ngrok-free.app/webhook/6a60a323-43d2-4cd8-9eae-45fa5b179117/chat", // Cambia por tu URL real
+        webhookConfig: {
+          method: "POST",
+          headers: {},
+        },
+        target: "#n8n-chat",
+        mode: "window",
+        chatInputKey: "chatInput",
+        chatSessionKey: "sessionId",
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: "en",
+        initialMessages: [
+          "Hola! 👋",
+          "Soy SuculentaBot. ¿Cómo puedo ayudarte hoy?",
+        ],
+        i18n: {
+          en: {
+            title: "Suculentísimo",
+            subtitle: "Estoy aquí para ayudarte 24/7.",
+            footer: "",
+            getStarted: "Nueva conversación",
+            inputPlaceholder: "Escribe tu pregunta...",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

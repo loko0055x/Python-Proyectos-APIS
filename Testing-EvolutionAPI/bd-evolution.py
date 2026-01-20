@@ -36,7 +36,7 @@ try:
     query = '''
     SELECT *
     FROM "Contact"
-    WHERE "pushName" LIKE 'Ma%' LIMIT 20;;
+    WHERE "pushName" LIKE 'Ma%' ;;
     '''
 
     df = pd.read_sql_query(query, connection)

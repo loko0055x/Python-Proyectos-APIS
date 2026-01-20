@@ -18,6 +18,12 @@ def traducir_a_espanol(texto):
 
 
 # Ahora esto será mucho más rápido
-caption_en = "Success"
+caption_en = """Your n8n server is configured to use a secure cookie,
+however you are either visiting this via an insecure URL, or using Safari.
+
+To fix this, please consider the following options:
+Setup TLS/HTTPS (recommended), or
+If you are running this locally, and not using Safari, try using localhost instead
+If you prefer to disable this security feature (not recommended), set the environment variable N8N_SECURE_COOKIE to false"""
 caption_es = traducir_a_espanol(caption_en)
 print("Descripción en español:", caption_es)

@@ -11,6 +11,3 @@ image = Image.open(image_path)
 # Extraer texto con OCR
 texto_extraido = pytesseract.image_to_string(image, lang="eng")
 print(texto_extraido)  # 'spa' = español
-
-print("Texto detectado:\n")
-print(texto_extraido)

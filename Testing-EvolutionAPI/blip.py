@@ -1,6 +1,5 @@
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
-import traductorFuncional as trx
 
 
 # Cargar el modelo y el procesador
@@ -17,5 +16,5 @@ inputs = processor(image, return_tensors="pt")
 out = model.generate(**inputs)
 caption = processor.decode(out[0], skip_special_tokens=True)
 
-caption = trx.traduccionSpanish(caption)
+# caption = trx.traduccionSpanish(caption)
 print("Descripción:", caption)

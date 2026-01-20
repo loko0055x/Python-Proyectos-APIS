@@ -10,8 +10,12 @@ from PIL import Image, UnidentifiedImageError
 from transformers import BlipProcessor, BlipForConditionalGeneration
 import whisper
 import traductorFuncional as trx
-
+import pytesseract
+from youtube_transcript_api import YouTubeTranscriptApi
+import getRemoteIDFunction as api_remote
 sys.stdout.reconfigure(encoding="utf-8")
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 
 app = FastAPI()
 
@@ -35,6 +39,15 @@ class AudioRequest(BaseModel):
 
 class ImageRequest(BaseModel):
     imagen_base64: str
+
+
+# metodos
+def decode_base64_to_image(base64_str: str) -> Image.Image:
+    try:
+        img_bytes = base64.b64decode(base64_str)
+        return Image.open(BytesIO(img_bytes)).convert("RGB")
+    except Exception as e:
+        raise ValueError("Imagen base64 inválida o corrupta") from e
 
 
 # --- Endpoints ---
@@ -85,3 +98,51 @@ def transcribe_image(req: ImageRequest):
 
     except Exception as e:
         return JSONResponse(status_code=500, content={"ok": False, "error": str(e)})
+
+
+@app.post("/getTextVoucher")
+def transcribe_voucher(req: ImageRequest):
+    try:
+        img_bytes = base64.b64decode(req.imagen_base64)
+        image = Image.open(BytesIO(img_bytes)).convert("RGB")
+    except (Exception, UnidentifiedImageError):
+        return JSONResponse(status_code=400, content={"ok": False, "error": "Imagen base64 inválida o corrupta"})
+
+    try:
+
+        texto_extraido = pytesseract.image_to_string(image, lang="eng")
+
+        return JSONResponse(status_code=200, content={"ok": True, "text": texto_extraido})
+
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"ok": False, "error": str(e)})
+
+
+class RemoteIDRequest(BaseModel):
+    remoteJid: str
+    pushName: str | None = None
+    
+@app.post("/getRemoteID")
+
+def get_remote_id(req: RemoteIDRequest):
+    try:
+        jid_original = req.remoteJid
+        push_name = req.pushName
+
+        jid_resuelto = api_remote.normalizar_jid(jid_original, push_name)
+
+        return JSONResponse(
+            status_code=200,
+            content={
+                "ok": True,
+                "uidbasic": jid_original,
+                "remoteID": jid_resuelto,
+                "resolved": jid_original != jid_resuelto
+            }
+        )
+
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"ok": False, "error": str(e)}
+        )

@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -8,21 +7,12 @@ url = "https://xdataperu.com/reniec-2025"
 
 # Datos que se enviarán
 data = {
-    "dato": "43705313",
+    "dato": "77485004",
     "tipo_consulta": "reniec_online"
 }
 
-# Función para obtener la página con manejo de sesión
-
 
 def obtener_datos(session, url, data, reintentos=3, espera=2):
-    """
-    session: requests.Session()
-    url: URL a consultar
-    data: Diccionario con POST data
-    reintentos: cantidad de reintentos si falla
-    espera: segundos de espera entre reintentos
-    """
     for intento in range(reintentos):
         try:
             response = session.post(url, data=data)
@@ -57,8 +47,13 @@ if html:
             if valor:
                 resultado[text] = valor
 
-    # Mostrar todos los datos
+    # Mostrar todos los datos en consola
     for k, v in resultado.items():
         print(f"{k}: {v}")
+
+    # Crear archivo HTML para mostrar resultados
+    with open("respuesta_completa.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
 else:
     print("No se pudo obtener datos después de varios intentos.")

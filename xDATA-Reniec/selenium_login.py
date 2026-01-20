@@ -48,7 +48,7 @@ try:
     api_url = "https://xdataperu.com/consultaarbol"
     data = {
         "api_seleccionada": "agv",
-        "dni": "40207286"
+        "dni": "12345678"
     }
 
     # Consumir la API usando cookies de sesión

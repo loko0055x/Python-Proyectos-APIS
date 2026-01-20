@@ -26,7 +26,7 @@ consolaOpen("C:\\Users\\Usuario\\n8n-project-local-SinDocker", "n8n")
 consolaOpen(rutadalto, commandwhisper)
 
 # Open Ngrok
-# consolaOpen("C:\\Windows\\system32", commandngrok)
+consolaOpen("", commandngrok)
 
 # Open Local Tunel
 # consolaOpen("C:\\Users\\Usuario", "lt --port 3000 --subdomain=katecito")
