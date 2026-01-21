@@ -38,7 +38,11 @@ try:
     FROM "Contact"
     WHERE "pushName" LIKE 'Ma%' ;;
     '''
-
+    query = '''
+    SELECT *
+    FROM "Contact"
+     ;
+    '''
     df = pd.read_sql_query(query, connection)
 
     json_result = df.to_json(orient='records', force_ascii=False)

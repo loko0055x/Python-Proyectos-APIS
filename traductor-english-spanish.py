@@ -9,4 +9,6 @@ def traduccionSpanish(text):
     return traduccion
 
 
-# print(traduccionSpanish("Success"))  # → Éxito.
+print(traduccionSpanish("""This site can’t be reached
+xdataperu.com’s DNS address could not be found. Diagnosing the problem.
+DNS_PROBE_POSSIBLE"""))  # → Éxito.

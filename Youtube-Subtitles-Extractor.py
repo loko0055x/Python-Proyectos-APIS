@@ -2,6 +2,13 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound, CouldNotRetrieveTranscript
 import json
 
+"""
+Este Proyecto trata de que mediante un link de youtube 
+un uid te retorne en consola los subtitulos en español
+
+ 
+"""
+
 
 def verificar_video(video_id):
     try:

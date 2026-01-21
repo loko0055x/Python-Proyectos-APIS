@@ -3,6 +3,19 @@ import json
 
 token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmQueGVudHJpY3MuYWkvYXBpL2xvZ2luIiwiaWF0IjoxNzU4ODU4MjczLCJleHAiOjE3NTg5NDQ2NzMsIm5iZiI6MTc1ODg1ODI3MywianRpIjoiNFpLSDhjTWlzc243bUxUMSIsInN1YiI6Ijc0NiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.l9K94urSDYRQKYkIJA1ivc99Hsv86qaLd5mYYBTQuE4"
 
+
+"""
+Este código toma un JWT y extrae la información del payload para que puedas verla de forma legible.
+Cada clave significa algo:
+iss → issuer (quién generó el token)
+iat → issued at (cuándo se creó)
+exp → expiración
+sub → subject (normalmente ID del usuario)
+jti → identificador único del token
+prv → puede ser info privada del token
+
+"""
+
 # separar el token en sus 3 partes
 header_b64, payload_b64, signature = token.split(".")
 

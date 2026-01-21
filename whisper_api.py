@@ -11,7 +11,6 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 import whisper
 import traductorFuncional as trx
 import pytesseract
-from youtube_transcript_api import YouTubeTranscriptApi
 import getRemoteIDFunction as api_remote
 sys.stdout.reconfigure(encoding="utf-8")
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
