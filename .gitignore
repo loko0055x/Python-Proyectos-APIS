@@ -1,23 +1,32 @@
-
-#Python corazon 
+# ------------------------
+# Carpeta Python Corazon
+# ------------------------
 Python_Corazon/
 
-
-# Ignorar solo estos archivos específicos
+# ------------------------
+# Ignorar archivos específicos en Testing-EvolutionAPI
+# ------------------------
 Testing-EvolutionAPI/bd-evolution.py
 Testing-EvolutionAPI/Blip-readBase64.py
 Testing-EvolutionAPI/blip.py
 Testing-EvolutionAPI/blip2-gradio-Interface.py
 
-
-#ignorar todo relacion amis practicas xDATA-Reniec
+# ------------------------
+# Ignorar prácticas xDATA-Reniec
+# ------------------------
 xDATA-Reniec/
 
-
-#ignorar
+# ------------------------
+# Ignorar archivos individuales en otras carpetas
+# ------------------------
 Xentrics-Pruebas/xentricRUC.py
-
-
-#acerca de los proyectos que uso diario
 contacts_cache.json
-getRemoteIDFunction.py
+getRemoteIDFunctionCOPIASEGURUDADSUCESS.py
+imgvoucher64.txt
+
+#falta testearcls
+pruebasflaskWebhook.py
+
+traductor_english_spanish.py
+whisper_api.py
+Youtube-Subtitles-Extractor.py
