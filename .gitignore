@@ -2,7 +2,8 @@
 # Carpeta Python Corazon
 # ------------------------
 Python_Corazon/
-
+Archivos_Excel/corazon.py
+Archivos_Excel/audio.mp3
 # ------------------------
 # Ignorar archivos específicos en Testing-EvolutionAPI
 # ------------------------
@@ -30,3 +31,8 @@ pruebasflaskWebhook.py
 traductor_english_spanish.py
 whisper_api.py
 Youtube-Subtitles-Extractor.py
+
+#innecesarios
+
+__pycache__/
+node_modules/
