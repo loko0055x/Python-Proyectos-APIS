@@ -1,10 +1,23 @@
 import requests
 import json
 
+"""
+Usando Evolution API 
+Mediante un  pushName  te retorna el  @s.whatsapp.net
+pero solo mediante el push name nada mas
+"""
+
+
+
+
 API_URL = "http://192.168.18.102:3000"
 INSTANCE = "prueba"
 API_KEY = "1234"
 headers = {"apikey": API_KEY, "Content-Type": "application/json"}
+
+
+
+
 
 
 def find_all_contacts():
@@ -44,6 +57,10 @@ webhook = {
     "pushName": "Mama",
 }
 
+webhook = {
+    "key": {"remoteJid": "268113450905721@lid"},
+    "pushName": "< David />",
+}
 jid_original = webhook["key"]["remoteJid"]
 push_name = webhook.get("pushName")
 

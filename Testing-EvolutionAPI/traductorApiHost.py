@@ -2,6 +2,13 @@ import sys
 import io
 from transformers import MarianMTModel, MarianTokenizer
 
+"""
+Esa importación sirve para hacer traducciones automáticas con IA.
+PERO ES INNEFICIENTE POR QUE DEMORA MUCHO demora mucho
+
+"""
+
+
 # Forzar salida UTF-8 en Windows
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 

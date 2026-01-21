@@ -1,6 +1,10 @@
 from PIL import Image
 import os
 
+"""
+mediante  4 imagenes que se encuentra en tu pc
+convertir en una sola tidi enb una  y en forma circular
+"""
 
 def combine_images_2x2(image_paths, output_path, size=(500, 500)):
     # Asumiendo que todas las imágenes tienen fondo transparente (RGBA)

@@ -1,0 +1,23 @@
+
+#Python corazon 
+Python_Corazon/
+
+
+# Ignorar solo estos archivos específicos
+Testing-EvolutionAPI/bd-evolution.py
+Testing-EvolutionAPI/Blip-readBase64.py
+Testing-EvolutionAPI/blip.py
+Testing-EvolutionAPI/blip2-gradio-Interface.py
+
+
+#ignorar todo relacion amis practicas xDATA-Reniec
+xDATA-Reniec/
+
+
+#ignorar
+Xentrics-Pruebas/xentricRUC.py
+
+
+#acerca de los proyectos que uso diario
+contacts_cache.json
+getRemoteIDFunction.py

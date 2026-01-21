@@ -2,6 +2,9 @@ from PIL import Image, ImageDraw, ImageChops
 import numpy as np
 
 
+"""
+mediante una imagen editar con forma circular
+"""
 def apply_cloud_mask_with_border_local(image_path, output_path, size=(500, 500), border_color=(255, 255, 0), border_width=6):
     # Abrir imagen local y redimensionar
     image = Image.open(image_path).convert("RGBA").resize(size)

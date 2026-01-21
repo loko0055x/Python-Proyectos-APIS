@@ -3,6 +3,17 @@ from io import BytesIO
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
 
+
+"""
+BLIP es un modelo de Inteligencia Artificial para imágenes + texto 🤖🖼️
+Su nombre viene de:
+
+BLIP = Bootstrapped Language–Image Pretraining
+
+'CONVERTIR DE IMAGENES A TEXTO MEDIANTE BASE64'
+
+"""
+
 # Cargar BLIP
 processor = BlipProcessor.from_pretrained(
     "Salesforce/blip-image-captioning-base")

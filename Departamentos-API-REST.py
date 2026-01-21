@@ -1,6 +1,9 @@
 import requests
 import json
 
+"""
+API SOBRE DEPARTAMENTOS PRONVINCIAS Y DISTRITOS DE LIMA PERU 
+"""
 
 def obtener_data(ruta):
     url = ruta

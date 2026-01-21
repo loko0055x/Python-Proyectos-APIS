@@ -1,5 +1,10 @@
 import base64
 
+"""
+Convertir una ruta de tu pc Archivo a base 64
+
+"""
+
 # Ruta local de la imagen
 ruta_imagen = "C:\\Users\\Usuario\\Downloads\\IMG_20241230_183552.jpg"
 ruta_imagen = "C:\\Users\\Usuario\\Pictures\\comprobante.jpg"

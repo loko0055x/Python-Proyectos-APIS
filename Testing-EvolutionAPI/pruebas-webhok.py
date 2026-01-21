@@ -1,12 +1,19 @@
 from flask import Flask, request
 import requests
 import json
-from getRemoteIDFunction import returndata
-
+ 
 
 app = Flask(__name__)
 
 procesados = set()
+
+"""
+WEB HOOK 
+Evolution api
+Falta testear bien (falta probar y encontrar la solucion ya que
+anteriormente se repetia  2 mensajes de  1 web hook uno es el remote y otro es el uuid
+"""
+
 
 # Configuración API Evolution
 API_URL = "http://localhost:3000"
@@ -78,6 +85,3 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5678, debug=True)
 
 
-if __name__ == "__main__":
-    # Servidor escuchando en tu puerto del webhook
-    app.run(host="0.0.0.0", port=5678)

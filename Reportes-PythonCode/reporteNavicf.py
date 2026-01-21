@@ -9,6 +9,12 @@ from reportlab.pdfbase.ttfonts import TTFont
 from PIL import Image
 import os
 
+"""
+Crear un reporte pdf a base de  codigo puro python con las librerias necesarias
+aun falta de diseño pero bueno es hecho con AYUDA de IA
+"""
+
+
 # Crear directorio si no existe
 os.makedirs('public', exist_ok=True)
 

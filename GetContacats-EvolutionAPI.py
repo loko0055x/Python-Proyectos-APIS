@@ -2,6 +2,11 @@ import requests
 
 import json
 
+"""
+Consumo de api sobre los contactos que tengo en evolution api
+sin que se repita por la foto
+"""
+
 
 def obtener_contactos():
     url = "http://192.168.18.102:3000/chat/findContacts/prueba"

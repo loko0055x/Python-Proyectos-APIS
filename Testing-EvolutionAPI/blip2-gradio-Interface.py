@@ -2,6 +2,17 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
 import gradio as gr
 
+"""
+Gradio es una herramienta que te permite crear interfaces web para tus modelos de IA en pocos minutos, sin saber frontend.
+Con Gradio puedes:
+Subir imágenes 📷
+Escribir texto ✍️
+Ver resultados en el navegador 🌐
+Probar modelos de IA (como BLIP, GPT, Whisper, etc.)
+
+
+"""
+
 # Cargar el modelo y el procesador
 processor = BlipProcessor.from_pretrained(
     "Salesforce/blip-image-captioning-base")
